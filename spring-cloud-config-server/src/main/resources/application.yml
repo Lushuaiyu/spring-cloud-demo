@@ -1,0 +1,33 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      #      discovery:
+      #        enabled: true
+      server:
+        git:
+          uri: https://github.com/Lushuaiyu/spring-cloud-config-center.git
+          # git 仓库下的相对路径
+          search-paths: spring-cloud-config
+          # 分支
+          default-label: master
+
+#        bootstrap: true
+#      name: springcloud
+
+
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://eureka01:8761/eureka/,http://eureka02:8762/eureka/,http://eureka03:8763/eureka/
+  instance:
+    prefer-ip-address: true #当猜测主机名时，服务器的IP地址应该在操作系统报告的主机名中使用
+
+
+
+
+

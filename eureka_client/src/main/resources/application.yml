@@ -1,0 +1,17 @@
+# 客户端注册进eureka服务列表里
+eureka:
+  client:
+    service-url:
+      default-zone: http://eureka01:8761/eureka/,http://eureka02:8762/eureka/,http://eureka03:8763/eureka/
+  instance:
+    # 人性化显示出服务的信息
+    instance-id: 书籍订单服务-8001
+    # 访问路径可显示ip地址
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: service-hi
+
+server:
+  port: 8080

@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: lib-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01:8761/eureka/,http://eureka02:8762/eureka/,http://eureka03:8763/eureka/
+server:
+  port: 9091

@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: spring-cloud-config-client
+
+
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"

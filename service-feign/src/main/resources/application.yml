@@ -1,0 +1,25 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: service-feign
+  profiles:
+    active: dev
+eureka:
+  client:
+    service-url:
+      default-zone: http://eureka01:8761/eureka/,http://eureka01:8762/eureka/,http://eureka01:8763/eureka/
+feign:
+  hystrix:
+    enabled: true
+#  client:
+#    config:
+#      defalut:
+#        connectTimeout: 2000
+#        readTimeout: 2000
+
+logging:
+  level:
+    project:
+      user:
+        UserClient: debug

@@ -1,0 +1,60 @@
+
+
+# 服务名称
+spring:
+  application:
+    name: spring-cloud-gateway
+
+  # 开启 Gateway 服务注册中心服务发现
+  # 开启SpringCloud Gateway的注册中心发现配置，
+  # 开启后可自动从服务注册中心拉取服务列表，通过各个服务
+  # 的spring.application.name作为前缀进行转发，该配置默认为false。
+  cloud:
+    gateway:
+#      discovery:
+#        locator:
+# 开启通过服务中心的自动根据 serviceId 创建路由的功能
+#          enabled: true
+      routes:
+      - id: hello-route
+        uri: lb://hello-service
+        order: 0
+        predicates:
+          - Path=/ribbon/**
+        filters:
+        - StripPrefix=1 #去掉前缀，具体实现参考StripPrefixGatewayFilterFactory
+        - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+      - id: lib-route
+        uri: lb://lib-service
+        order: 0
+        predicates:
+          - Path=/feign/**
+        filters:
+        - StripPrefix=1
+        - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+      - id: lib-route
+        uri: lb://service-feign
+        order: 0
+        predicates:
+          - Path=/feign-service/**
+        filters:
+        - StripPrefix=1
+        - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+
+# Eureka Server 配置
+# 配置Eureka Server默认的空间地址
+eureka:
+  client:
+    service-url:
+      defult-zone: http://eureka01:8761/eureka/,http://eureka02:8762/eureka/,http://eureka03:8763/eureka/
+
+# 配置Gateway日志等级，输出转发细节信息
+# 设置SpringCloud Gateway日志等级为debug，
+# 用于输出转发的细节日志，方便查看细节流程。
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+server:
+  port: 8085
+
+
