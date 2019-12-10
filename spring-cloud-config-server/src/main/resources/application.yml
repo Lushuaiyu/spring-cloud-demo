@@ -16,6 +16,7 @@ spring:
           default-label: master
           ignore-local-ssh-settings: true
           # private key 写自己的 用 ssh-keygen -m PEM -t rsa -b 4096 -C "your_email@example.com" 重新生成
+
           private-key: |
                         -----BEGIN RSA PRIVATE KEY-----
                         MIIJKAIBAAKCAgEAsoG8enjx65DYjcynpzKmet97MhwC6Kvp+6DpuiDVPYBTns9W
