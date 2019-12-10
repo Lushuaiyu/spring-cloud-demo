@@ -9,11 +9,65 @@ spring:
       #        enabled: true
       server:
         git:
-          uri: https://github.com/Lushuaiyu/spring-cloud-config-center.git
+          uri: git@github.com:Lushuaiyu/spring-cloud-config-center.git
           # git 仓库下的相对路径
           search-paths: spring-cloud-config
           # 分支
           default-label: master
+          ignore-local-ssh-settings: true
+          private-key: |
+                        -----BEGIN RSA PRIVATE KEY-----
+                        MIIJKAIBAAKCAgEAsoG8enjx65DYjcynpzKmet97MhwC6Kvp+6DpuiDVPYBTns9W
+                        QqZmFnSp4HDA7RZL68LWxKEQaOZnkGU16R4YV6yr0fBiUbaVKtIyCEpFrRQxUB8u
+                        ezsFiCtBdZOujUbVae2XR8huhpg339ffs3EuDh3Cni2iFQkcb/WLjCcX5N2uqNQ0
+                        lilVIDVY8x8ukBdfHUXUXhAM6M9srt4RFEfnq6/i0CL0TJ6PIbi+ghCawxhoIbKy
+                        xaLncNyvuEt5KNomyI60laGGALDqZHZ5cJCVqNVxnBidfTljA32BgtC9y29PPcsj
+                        X8rKfVOVgwyUrLD18sj0I+eTLPtSZ0URkl5yoonKks3S8W3zk4GpEqqQiRTW9wse
+                        l3q9OICWEDg6NKqvsamuUIY43CiTSCC6tc1NYaQOs0+otDYGVHLLOk0VEVs5LeE5
+                        zLWL0cpXwnQcU4ZFRS2eNDu0gd0u/U2zwScOlleqz5kRPtdcCC9RniMSpNWgyAds
+                        JeSp+aoFnmPff1pyCDwo1EcgbumFvyZWc6kFOUImkL39rUTVFwEUcSsq/aj0ZLZk
+                        ZTLDKegRm9gT4Yck2Ffcm1H+g+yQwVYdhMtJumhCMW4a+w6pUtq1ZM11dZQFsARC
+                        4+c4SkN6vkFypdmZ49/ybSqp+CyJGuEuva5bqIqHHhSIJVTnbAK8bugPadkCAwEA
+                        AQKCAgAY1R2AOCUHbT4C8+56vvwT6dT8kpMBBTFmtOru3rRretenJxbL7NQU2aPs
+                        OiNMmCZ1pMQ11GYxAaR0nO/T/0DJqZa5fORgk7LKozUcnCB3RHDbwYq4z+wkFkhj
+                        7+h/dNQpiUjbTpG5naFgPWq8TslmY1N4p8Z9gKf5F0KTe7jCOOicSfEK1rMl6OX3
+                        5GWY2/d6XgV+FGOHW5u18+SSWrJq2uwFomcz5Xbp7QZrl52/+Dw8O9zMy63AsKKt
+                        U6qGOVrd2aRbkH3QyMvCsAyS0TpQo2jLm00FZ59Tk/kZVqqgi1qNsR25rL9gkekh
+                        svVX1MJSRQxZllSOFGRRQ3V/VC5EHKRYTh9UpdLAtVvLkli/tdKjCne1GNchxdSX
+                        94cwHR0WBVn8fw1+OakmGnb2+BXVASiSOe1sLotTX9RheTeVnQbPI7sTH4VdNKLI
+                        zzaP9/PyCvjIehrbTrC9vurQneDyOPPeRAFub+fniFyZ9gPA8a5VjTRlgoQUSYlP
+                        u86J+Vlw3nxrajVEU/gPq490hf2RBKSgEZ/V2bynqHxNVose2qomBsUZPLUKihl7
+                        Q4P5/kR9z8jnnHalPSnvkWOI1fNRDzc5sNjQet4uck3brddLDBFP+DtDAFcGDd2Z
+                        s/NVaq9NFPgTKLufZrfj8f/4SJWAdkyPzipoH4Bvt+hd/DR8AQKCAQEA5K4lTjm4
+                        KHDKgcprfvUYf20z/pe+7zFGnOdWX/r/qjVgEdoWW6uDWvRtMMT4RY3EP3hwJ+Lt
+                        6Y4PAnk31x3Gr81wUoeG6qoUGohXGRSDeb27QsJuzlSmSWWbX36v4SUShk8dl8pD
+                        vSZDPmS5ytlZdGK2aqkaxO+V5h/z+TYHqFAuD2nNozFXJBP17dpiMLxBo8kPusN/
+                        UNG4eSmPkGBYEIcESnyGsBsEHD05zkBJWP3f4KvLZmkAzefB+I43HbXf1w8indCC
+                        pJwMNAF1uIU8t+htKTMytlIWSVAhFNHj73nn0MXvoVKZc+QnSYZ7DRtjAN4rIw/+
+                        E6NjcUCflh79WQKCAQEAx9UbhYFkCDr4nnnn8hA/oAukv5FxrMIXxQJvti6mdll9
+                        eAr8gLM33Jq78tJ13sWtbTDw5ZI3vY8246Y9RTfvbCVlmPepNHmLwvXuiuxuHx7U
+                        qslBF5Uc3+iYN7QVb/zGSNyS3lOwO7L9vQC0/EWQ+fyUwZNRBBwHAGtmfT4uqhcB
+                        6MIBUNPszZrKxpAdVb6tCKfk9+LIdUbODvPX8x3VwfTlhSx3jHLfwx/ZqCGrRHY1
+                        XLERXO70Fq5Bgu47zlBZwIFYjFMU4bUumgCeh8iwfv4tG2J95q9ExZVbHbd90ksf
+                        ArO+zGarZYVmU/XOwjjp3TIOzkB2uOV74Xq+7wfAgQKCAQEA1v+js1gw/FSPEFfv
+                        mP12eteA+uxQZzI84WfenX6uwKhOGnqgaq9mYC1OO3v0r/AJgmMJj3abl+on0nuF
+                        NIqaMs9Du1QQVLBzFj75JGtU8TCgzrNe2j5b2MXevnmtglAIip33hK514XAH6LFq
+                        vHx8zh/Awacbs+xNUn7YMoXJzUUVCQjAfZ31/8WEgou/pXJZhFOUplMHcES8261n
+                        fKYYJfHK5v0M5KWBx8sIfhGS5EhMJD9gjHhMeUpb5ARRbW2BdgCU2yseqQTNtFdr
+                        BoC+BWpQt1ubYi7rJSJg9+IeGxjSCkcOdO3juEHZbhcxubD18+rtQ5nVl0EWTXQk
+                        lk+sgQKCAQBIU3FqmLJD6FQjx6uTiR3+JzixvUqPZJCF1aPpJGlLXIh08kUBr9wA
+                        FGECOfo/bvyeEKCf9pQGH9eV/Y0fiGc3lTF4c+rh+zwCjFCSJ5CT4uzGA6Fzj5yr
+                        zduKDbvUlICPzoW5wkB+2wHLbn4S8HrQgAK3LUKdYieGl1i469Cn7zvZqp4fSxTi
+                        Naw+wdpcNm8aOuo8bfBvwfjCoK8AZ0P+t0x7LuT2CH3Eebqlh8odNUuLCOtn33So
+                        4NkFMoSi36IccrRB1bAxIQqE4sR+EL0QuZ5J0xQOclFJ0gzwbIE1o8rNh5D/Ggne
+                        7LFkogr7cO30CTIipGJT+Xsk2PBSQ1QBAoIBAGBjH7JjY3kidM5jSO4kGSKnSpd2
+                        /3GoiqOi6h4RZjBn9WxnAqL/RyWPBbg0KgClWSgzM6sTFvj55eWWgFbgn8CTMVvS
+                        pbG8mP28v2QHvkMSFfUmcPUmn3Dx0Ux3g1xFdzKAX2iMJ3DeK3CLmP1K5NObNDqb
+                        xVX61duURJjOn7UhDKldjlsssS8yC+yGUpN1B3EtuCtajs79eXeDQ4qXCRLNcI49
+                        ktF9TsbPWy4YVUpJWJDl1EX34Es7RBQMePZU5wUNxboOeMyWFFXggeusjCDW2JuR
+                        8QEBtNnFFb2eRcvSWQ4e/S8qH6ZrLUn+4uuK9P6aHh3RzJlu2UW+9VxW3hE=
+                        -----END RSA PRIVATE KEY-----
+
 
 #        bootstrap: true
 #      name: springcloud
